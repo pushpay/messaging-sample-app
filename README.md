@@ -45,7 +45,7 @@ REACT_APP_APPLICATION_NUMBER=
 
 ### Create the database schema
 
-You can use (https://flywaydb.org/)[Flyway] to run the SQL migration script to create your schema. For example if you are running the DB on `localhost` you should be able to use the following command:
+You can use [Flyway](https://flywaydb.org/) to run the SQL migration script to create your schema. For example if you are running the DB on `localhost` you should be able to use the following command:
 Flyway
 
     $ flyway -user=root -password="" -locations=filesystem:sql -url=jdbc:mariadb://localhost:3306/messaging migrate
