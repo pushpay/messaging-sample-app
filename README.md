@@ -1,6 +1,7 @@
 # Pushpay fork changes
 
 1. The API url used by default is `https://api.catapult.inetwork.com/`. Change it to `https://messaging.bandwidth.com/api` instead.
+2. Change some environment variable names to be more relevant.
 
 # Bandwidth Messaging API Sample App
 
@@ -31,12 +32,12 @@ DATABASE_USERNAME=root
 DATABASE_PASSWORD=
 DATABASE_NAME=messaging
 
-CATAPULT_USER_ID=
-CATAPULT_API_TOKEN=
-CATAPULT_API_SECRET=
+BANDWIDTH_ACCOUNT_ID=
+BANDWIDTH_API_TOKEN=
+BANDWIDTH_API_SECRET=
 
 APPLICATION_ID=
-APPLICATION_NUMBER=
+APPLICATION_NUMBER=<'from' phone number>
 ```
 
 ### Set the application number in the front end
@@ -44,7 +45,7 @@ APPLICATION_NUMBER=
 You will also need to set your Application Number in the front end for the UI to display correctly. Edit `/client/.env` and set your number:
 
 ```
-REACT_APP_APPLICATION_NUMBER=
+REACT_APP_APPLICATION_NUMBER=<'from' phone number>
 ```
 
 ### Create the database schema

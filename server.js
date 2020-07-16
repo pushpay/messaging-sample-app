@@ -13,9 +13,9 @@ const port = process.env.PORT || 3000;
 
 let client = new Bandwidth({
   baseUrl: "https://messaging.bandwidth.com/api",
-  userId: process.env.CATAPULT_USER_ID,
-  apiToken: process.env.CATAPULT_API_TOKEN,
-  apiSecret: process.env.CATAPULT_API_SECRET
+  userId: process.env.BANDWIDTH_ACCOUNT_ID, // yes, userId is being set to account id ¯\_(ツ)_/¯
+  apiToken: process.env.BANDWIDTH_API_TOKEN,
+  apiSecret: process.env.BANDWIDTH_API_SECRET
 });
 
 app.use(bodyParser.json());
