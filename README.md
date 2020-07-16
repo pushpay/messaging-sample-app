@@ -3,6 +3,7 @@
 1. The API url used by default is `https://api.catapult.inetwork.com/`. Change it to `https://messaging.bandwidth.com/api` instead.
 2. Change some environment variable names to be more relevant.
 3. Remove the `applicationId` from the message payload before writing it to the database.
+4. Remove annoying automatic prefixing of "+1" with phone numbers.
 
 # Bandwidth Messaging API Sample App
 
