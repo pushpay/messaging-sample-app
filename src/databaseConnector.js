@@ -105,6 +105,7 @@ module.exports = class DatabaseConnector {
     let conn;
     let threadId = this.getThreadIdForMessage(message);
     try {
+      message = this.removeApplicationId(message);
       conn = await this.pool.getConnection();
       await conn.beginTransaction();
       await conn.query(
@@ -147,5 +148,11 @@ module.exports = class DatabaseConnector {
     let participants = message.to.slice();
     participants.push(message.from);
     return participants.sort().join();
+  }
+
+  removeApplicationId(message) {
+    // this is important because we are treating application ids as a secret
+    delete message.applicationId;
+    return message;
   }
 };
