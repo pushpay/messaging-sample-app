@@ -12,6 +12,7 @@ const db = new DatabaseConnector();
 const port = process.env.PORT || 3000;
 
 let client = new Bandwidth({
+  baseUrl: "https://messaging.bandwidth.com/api",
   userId: process.env.CATAPULT_USER_ID,
   apiToken: process.env.CATAPULT_API_TOKEN,
   apiSecret: process.env.CATAPULT_API_SECRET

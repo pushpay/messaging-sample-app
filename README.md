@@ -1,3 +1,7 @@
+# Pushpay fork changes
+
+1. The API url used by default is `https://api.catapult.inetwork.com/`. Change it to `https://messaging.bandwidth.com/api` instead.
+
 # Bandwidth Messaging API Sample App
 
 This app demonstrates how you can build a small server that works with Bandwidth's Messaging API. It will send and receive messages, store them and retrieve them, provide conversation threading, and provide a web interface that updates in realtime.
