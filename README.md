@@ -60,6 +60,8 @@ Alternatively, you could just copy/paste the contents of the `sql/V1__create_sch
 
 ## Install Node.js dependencies
 
+(Note: I think it requires Node 12 and only works on Linux? I tried building it on macOS Catalina with different Node versions but no luck ¯\_(ツ)_/¯.)
+
     $ npm run install:all
 
 ## Build and run
