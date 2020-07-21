@@ -59,7 +59,7 @@ app.post("/api/threads/:threadId", async (req, res) => {
     let participants = req.params.threadId.split(",");
     let recipients = [];
     participants.forEach(participant => {
-      if (participant !== process.env.APPLICATION_NUMBER) {
+      if (participant !== "" && participant !== process.env.APPLICATION_NUMBER) {
         recipients.push(participant);
       }
     });
