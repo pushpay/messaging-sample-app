@@ -30,7 +30,7 @@ export default class Utils {
       //.replace(/(\+1)?([^0-9,])?/g, "")
       .split(",")
       //.map(number => `+1${number}`)
-      .concat(process.env.REACT_APP_APPLICATION_NUMBER)
+      //.concat(process.env.REACT_APP_APPLICATION_NUMBER)
       .sort()
       .join(",");
   }

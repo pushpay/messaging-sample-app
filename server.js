@@ -63,6 +63,7 @@ app.post("/api/threads/:threadId", async (req, res) => {
         recipients.push(participant);
       }
     });
+    console.log(`sending to ${recipients}`);
     let message = await client.v2.Message.send({
       from: process.env.APPLICATION_NUMBER,
       to: recipients,
@@ -76,6 +77,7 @@ app.post("/api/threads/:threadId", async (req, res) => {
     res.send(message);
     updateWebClients(threadId);
   } catch (e) {
+    console.error(e);
     res.status(500).send(e.message);
   }
 });
