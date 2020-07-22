@@ -20,6 +20,10 @@ let client = new Bandwidth({
 
 app.use(bodyParser.json());
 
+app.get("/health", async (req, res) => {
+    res.status(200).send("ok");
+});
+
 app.post("/callback", async (req, res) => {
   let callback = req.body[0];
   if (callback && callback.type === "message-received") {
