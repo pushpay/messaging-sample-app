@@ -26,15 +26,15 @@ app.get("/health", async (req, res) => {
 
 app.post("/callback", async (req, res) => {
   let callback = req.body[0];
+  if (callback && callback.message) {
+    console.log(`callback received ${callback.type} for ${callback.message.id}`);
+  }
   if (callback && callback.type === "message-received") {
     let message = callback.message;
     let threadId = db.getThreadIdForMessage(message);
     await createNewThreadIfNeeded(message);
-    if (!sentimentEnabled) {
-      delete message.analysis;
-    }
     await db.insertMessage(message);
-    console.log(`saved message ${message.id} to the db`);
+    console.log(`message received. saved message ${message.id} to the db`);
     res.status(200).send();
     updateWebClients(threadId);
   } else {
