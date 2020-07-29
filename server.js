@@ -28,6 +28,7 @@ app.post("/callback", async (req, res) => {
   let callback = req.body[0];
   if (callback && callback.message) {
     console.log(`callback received ${callback.type} for ${callback.message.id}`);
+    console.log(`${JSON.stringify(callback.message)}`);
   }
   if (callback && callback.type === "message-received") {
     let message = callback.message;

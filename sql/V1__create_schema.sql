@@ -1,7 +1,7 @@
 CREATE TABLE thread (
     id VARCHAR(186) PRIMARY KEY NOT NULL,
     unread_count INT DEFAULT 0,
-    last_message_id VARCHAR(32)
+    last_message_id VARCHAR(128)
 );
 
 CREATE TABLE message (
